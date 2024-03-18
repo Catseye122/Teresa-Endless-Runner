@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform feetPosition;
     [SerializeField] private float groundDistance = 0.25f;
     [SerializeField] private float jumpTime = 0.3f;
-    //[SerializeField] private ObstacleSpawner obstacleSpawner;
+    [SerializeField] private ObstacleSpawner obstacleSpawner;
     // [SerializeField] private Animator animator;
     // Start is called before the first frame update
     private bool isGrounded = false;
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
             //animator.SetBool("isJumping", false);
         }
 
-        //isGrounded = Physics2D.OverlapCircle(feetPosition.position, groundDistance, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(feetPosition.position, groundDistance, groundLayer);
 
         if (isGrounded == true && Input.GetButtonDown("Jump"))
         {
@@ -69,11 +69,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && isGrounded == true)
         {
-            //obstacleSpawner.PauseObstacles();
+            obstacleSpawner.PauseObstacles();
         }
         if (Input.GetKeyUp(KeyCode.E) && isGrounded == true)
         {
-            //obstacleSpawner.ResumeObstacles();
+            obstacleSpawner.ResumeObstacles();
         }
     }
 
@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
             jumpTimer = 0f;
 
-
+              
         }
     }
 }

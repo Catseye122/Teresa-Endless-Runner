@@ -9,6 +9,7 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] private float spawnTimeMin = 2f;
     [SerializeField] private float spawnTimeMax = 5f;
     [SerializeField] private float obstacleSpeed = 3f;
+    
 
     private float timeUntilObstacleSpawn;
 
@@ -28,7 +29,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void Update()
     {
-        if(gameManager.isPlaying)
+        if(GameManager.Instance.isPlaying)
         {
             SpawnLoop();
         }
@@ -77,7 +78,7 @@ public class ObstacleSpawner : MonoBehaviour
         Rigidbody2D obstacleRB = spawnedObstacle.GetComponent<Rigidbody2D>();
         obstacleRB.velocity = Vector2.left * obstacleSpeed;
         activeObstacles.Add(spawnedObstacle);   
-        //obstacleRB.velocity = new Vector2(-1 * obstacleSpeed, 0); long form
+        obstacleRB.velocity = new Vector2(-1 * obstacleSpeed, 0);
 
     }
 
@@ -101,8 +102,8 @@ public class ObstacleSpawner : MonoBehaviour
 
     }
 
-
+    
 
     // Update is called once per frame
-   
+
 }
