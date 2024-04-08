@@ -948,7 +948,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1853894762143033147, guid: f43d4f8668b00fc4a953fd9aa4449c66, type: 3}
       propertyPath: m_Name
-      value: Ground
+      value: ' Ground'
       objectReference: {fileID: 0}
     - target: {fileID: 1853894762143033147, guid: f43d4f8668b00fc4a953fd9aa4449c66, type: 3}
       propertyPath: m_TagString
@@ -1029,6 +1029,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1853894762143033147, guid: f43d4f8668b00fc4a953fd9aa4449c66, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3219554902337984921}
+    - targetCorrespondingSourceObject: {fileID: 1853894762143033147, guid: f43d4f8668b00fc4a953fd9aa4449c66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3219554902337984925}
   m_SourcePrefab: {fileID: 100100000, guid: f43d4f8668b00fc4a953fd9aa4449c66, type: 3}
 --- !u!1 &3219554902337984916 stripped
 GameObject:
@@ -1062,6 +1065,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3219554902337984925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3219554902337984916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a547d8d7acaad6841b787fe7e0e0ad78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftBound: -40
+  rightBound: 100
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
